@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230420 14:02:39.591" rpa="false" schemaversion="3">
+<suite id="s1" name="Desktop" source="C:\Users\marcelo.ribelato\Projetos\ROBOT\robot-desktop-example\features\desktop.robot">
+<test id="s1-t1" name="Cenário teste: Fazer input de dados e verificar mensagem" line="6">
+<kw name="Dado que estou com a aplicação aberta" library="BDDpt-br" sourcename="Dado que ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="estou com a aplicação aberta" library="desktop">
+<kw name="Launch Application" library="FlaUILibrary">
+<var>${PID}</var>
+<arg>C:\\Users\\marcelo.ribelato\\Projetos\\ROBOT\\robot-desktop-example\\steps/../app/MyCRM.exe</arg>
+<doc>Launches an application.</doc>
+<msg timestamp="20230420 14:02:46.101" level="INFO">${PID} = 10380</msg>
+<status status="PASS" starttime="20230420 14:02:45.377" endtime="20230420 14:02:46.101"/>
+</kw>
+<kw name="Attach Application By Pid" library="FlaUILibrary">
+<arg>${PID}</arg>
+<doc>Attach to a running application by pid.</doc>
+<status status="PASS" starttime="20230420 14:02:46.101" endtime="20230420 14:02:46.265"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PID}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230420 14:02:46.266" level="INFO">${PID} = 10380</msg>
+<status status="PASS" starttime="20230420 14:02:46.266" endtime="20230420 14:02:46.266"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="FlaUILibrary">
+<arg>${CAMPO_FIRST_NAME}</arg>
+<doc>Waits until element is visible or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
+<status status="PASS" starttime="20230420 14:02:46.267" endtime="20230420 14:02:53.119"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:45.377" endtime="20230420 14:02:53.119"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:45.374" endtime="20230420 14:02:53.120"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:45.374" endtime="20230420 14:02:53.120"/>
+</kw>
+<kw name="Quando digito o primeiro e último nome" library="BDDpt-br" sourcename="Quando ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="digito o primeiro e último nome" library="desktop">
+<kw name="Element Should Be Visible" library="FlaUILibrary">
+<arg>${CAMPO_FIRST_NAME}</arg>
+<doc>Checks if element is visible.</doc>
+<status status="PASS" starttime="20230420 14:02:53.127" endtime="20230420 14:02:53.738"/>
+</kw>
+<kw name="Set Text To Textbox" library="FlaUILibrary">
+<arg>${CAMPO_FIRST_NAME}</arg>
+<arg>Joana</arg>
+<doc>Inputs value to a textbox module.</doc>
+<status status="PASS" starttime="20230420 14:02:53.738" endtime="20230420 14:02:54.364"/>
+</kw>
+<kw name="Element Should Be Visible" library="FlaUILibrary">
+<arg>${CAMPO_LAST_NAME}</arg>
+<doc>Checks if element is visible.</doc>
+<status status="PASS" starttime="20230420 14:02:54.364" endtime="20230420 14:02:54.939"/>
+</kw>
+<kw name="Set Text To Textbox" library="FlaUILibrary">
+<arg>${CAMPO_LAST_NAME}</arg>
+<arg>Silva</arg>
+<doc>Inputs value to a textbox module.</doc>
+<status status="PASS" starttime="20230420 14:02:54.940" endtime="20230420 14:02:55.586"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:53.127" endtime="20230420 14:02:55.586"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:53.122" endtime="20230420 14:02:55.587"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:53.121" endtime="20230420 14:02:55.587"/>
+</kw>
+<kw name="E altero o gênero" library="BDDpt-br" sourcename="E ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="altero o gênero" library="desktop">
+<kw name="Element Should Be Visible" library="FlaUILibrary">
+<arg>${CHECKBOX_FEMALE}</arg>
+<doc>Checks if element is visible.</doc>
+<status status="PASS" starttime="20230420 14:02:55.591" endtime="20230420 14:02:56.163"/>
+</kw>
+<kw name="Click" library="FlaUILibrary">
+<arg>${CHECKBOX_FEMALE}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" starttime="20230420 14:02:56.164" endtime="20230420 14:02:56.908"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:55.591" endtime="20230420 14:02:56.909"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:55.588" endtime="20230420 14:02:56.909"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:55.588" endtime="20230420 14:02:56.909"/>
+</kw>
+<kw name="E altero o estado" library="BDDpt-br" sourcename="E ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="altero o estado" library="desktop">
+<kw name="Element Should Be Visible" library="FlaUILibrary">
+<arg>${CAMPO_ESTADOS}</arg>
+<doc>Checks if element is visible.</doc>
+<status status="PASS" starttime="20230420 14:02:56.917" endtime="20230420 14:02:57.460"/>
+</kw>
+<kw name="Click" library="FlaUILibrary">
+<arg>${CAMPO_ESTADOS}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" starttime="20230420 14:02:57.461" endtime="20230420 14:02:58.089"/>
+</kw>
+<kw name="Select Listbox Item By Name" library="FlaUILibrary">
+<arg>${LISTA_ESTADOS}</arg>
+<arg>CA</arg>
+<doc>Selects item from listbox by name.</doc>
+<status status="PASS" starttime="20230420 14:02:58.089" endtime="20230420 14:02:58.268"/>
+</kw>
+<kw name="Listbox Selection Should Be" library="FlaUILibrary">
+<arg>${LISTA_ESTADOS}</arg>
+<arg>CA</arg>
+<doc>Checks if the selected listbox items are same with the given ones.</doc>
+<status status="PASS" starttime="20230420 14:02:58.268" endtime="20230420 14:02:58.287"/>
+</kw>
+<kw name="Press Key" library="FlaUILibrary">
+<arg>s'ENTER'</arg>
+<doc>Keyboard control to execute a user defined one shurcut or text.</doc>
+<status status="PASS" starttime="20230420 14:02:58.288" endtime="20230420 14:02:58.300"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:56.916" endtime="20230420 14:02:58.300"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:56.912" endtime="20230420 14:02:58.300"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:56.911" endtime="20230420 14:02:58.300"/>
+</kw>
+<kw name="E verifico o código postal" library="BDDpt-br" sourcename="E ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="verifico o código postal" library="desktop">
+<kw name="Element Should Be Visible" library="FlaUILibrary">
+<arg>${CAMPO_ZIPCODE}</arg>
+<doc>Checks if element is visible.</doc>
+<status status="PASS" starttime="20230420 14:02:58.304" endtime="20230420 14:02:58.915"/>
+</kw>
+<kw name="Set Text To Textbox" library="FlaUILibrary">
+<arg>${CAMPO_ZIPCODE}</arg>
+<arg>123</arg>
+<doc>Inputs value to a textbox module.</doc>
+<status status="PASS" starttime="20230420 14:02:58.915" endtime="20230420 14:02:59.554"/>
+</kw>
+<kw name="Element Should Be Visible" library="FlaUILibrary">
+<arg>${BOTAO_VALIDAR_ZIP}</arg>
+<doc>Checks if element is visible.</doc>
+<status status="PASS" starttime="20230420 14:02:59.554" endtime="20230420 14:03:00.116"/>
+</kw>
+<kw name="Click" library="FlaUILibrary">
+<arg>${BOTAO_VALIDAR_ZIP}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" starttime="20230420 14:03:00.116" endtime="20230420 14:03:00.826"/>
+</kw>
+<kw name="Element Should Be Visible" library="FlaUILibrary">
+<arg>${MSG_ZIP_VALIDO}</arg>
+<doc>Checks if element is visible.</doc>
+<status status="PASS" starttime="20230420 14:03:00.826" endtime="20230420 14:03:01.448"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:58.304" endtime="20230420 14:03:01.448"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:58.301" endtime="20230420 14:03:01.448"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:58.300" endtime="20230420 14:03:01.449"/>
+</kw>
+<kw name="E seleciono a aba 'Other'" library="BDDpt-br" sourcename="E ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="seleciono a aba 'Other'" library="desktop">
+<kw name="Element Should Be Visible" library="FlaUILibrary">
+<arg>${ABA_OTHER}</arg>
+<doc>Checks if element is visible.</doc>
+<status status="PASS" starttime="20230420 14:03:01.453" endtime="20230420 14:03:01.995"/>
+</kw>
+<kw name="Click" library="FlaUILibrary">
+<arg>${ABA_OTHER}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" starttime="20230420 14:03:01.996" endtime="20230420 14:03:02.725"/>
+</kw>
+<status status="PASS" starttime="20230420 14:03:01.452" endtime="20230420 14:03:02.726"/>
+</kw>
+<status status="PASS" starttime="20230420 14:03:01.450" endtime="20230420 14:03:02.727"/>
+</kw>
+<status status="PASS" starttime="20230420 14:03:01.450" endtime="20230420 14:03:02.727"/>
+</kw>
+<kw name="E clico no botão 'Save'" library="BDDpt-br" sourcename="E ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="clico no botão 'Save'" library="desktop">
+<kw name="Wait Until Element Is Visible" library="FlaUILibrary">
+<arg>${BOTAO_SALVAR}</arg>
+<doc>Waits until element is visible or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
+<status status="PASS" starttime="20230420 14:03:02.736" endtime="20230420 14:03:03.439"/>
+</kw>
+<kw name="Click" library="FlaUILibrary">
+<arg>${BOTAO_SALVAR}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" starttime="20230420 14:03:03.439" endtime="20230420 14:03:04.218"/>
+</kw>
+<status status="PASS" starttime="20230420 14:03:02.735" endtime="20230420 14:03:04.218"/>
+</kw>
+<status status="PASS" starttime="20230420 14:03:02.729" endtime="20230420 14:03:04.219"/>
+</kw>
+<status status="PASS" starttime="20230420 14:03:02.729" endtime="20230420 14:03:04.219"/>
+</kw>
+<kw name="Entao visualiso o popup com a mensagem correta" library="BDDpt-br" sourcename="Entao ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="visualiso o popup com a mensagem correta" library="desktop">
+<kw name="Wait Until Element Is Visible" library="FlaUILibrary">
+<arg>${MSG_POPUP_SAVE}</arg>
+<doc>Waits until element is visible or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
+<status status="PASS" starttime="20230420 14:03:04.224" endtime="20230420 14:03:04.255"/>
+</kw>
+<kw name="Name Should Be" library="FlaUILibrary">
+<arg>SAVE button has been clicked</arg>
+<arg>${MSG_POPUP_SAVE}</arg>
+<doc>Verifies if name from element is equal.</doc>
+<status status="PASS" starttime="20230420 14:03:04.255" endtime="20230420 14:03:04.287"/>
+</kw>
+<kw name="Element Should Be Visible" library="FlaUILibrary">
+<arg>${BOTAO_OK_POPUP_SAVE}</arg>
+<doc>Checks if element is visible.</doc>
+<status status="PASS" starttime="20230420 14:03:04.288" endtime="20230420 14:03:04.317"/>
+</kw>
+<kw name="Click" library="FlaUILibrary">
+<arg>${BOTAO_OK_POPUP_SAVE}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" starttime="20230420 14:03:04.317" endtime="20230420 14:03:04.452"/>
+</kw>
+<status status="PASS" starttime="20230420 14:03:04.224" endtime="20230420 14:03:04.452"/>
+</kw>
+<status status="PASS" starttime="20230420 14:03:04.220" endtime="20230420 14:03:04.452"/>
+</kw>
+<status status="PASS" starttime="20230420 14:03:04.220" endtime="20230420 14:03:04.453"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:45.373" endtime="20230420 14:03:04.454"/>
+</test>
+<kw name="Fechar App" library="desktop" type="TEARDOWN">
+<kw name="Close Application" library="FlaUILibrary">
+<arg>${PID}</arg>
+<doc>Closes the attached application.</doc>
+<status status="PASS" starttime="20230420 14:03:04.457" endtime="20230420 14:03:04.489"/>
+</kw>
+<status status="PASS" starttime="20230420 14:03:04.456" endtime="20230420 14:03:04.490"/>
+</kw>
+<status status="PASS" starttime="20230420 14:02:39.595" endtime="20230420 14:03:04.491"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Desktop">Desktop</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
